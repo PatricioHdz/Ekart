@@ -1,0 +1,33 @@
+pipeline:
+  name: Build Ekart
+  identifier: Build_PatricioHdz_Ekart_1755714330148
+  projectIdentifier: EKart
+  orgIdentifier: Patricio_Playground
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github
+        repoName: PatricioHdz/Ekart
+        build: <+input>
