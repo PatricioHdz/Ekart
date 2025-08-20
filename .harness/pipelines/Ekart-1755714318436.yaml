@@ -5,7 +5,7 @@ pipeline:
   orgIdentifier: Patricio_Playground
   stages:
     - stage:
-        name: Build
+        name: Build Image
         identifier: Build
         type: CI
         spec:
@@ -25,6 +25,12 @@ pipeline:
           runtime:
             type: Cloud
             spec: {}
+          caching:
+            enabled: false
+            paths: []
+          buildIntelligence:
+            enabled: false
+        description: ""
   properties:
     ci:
       codebase:
