@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_PatricioHdz_Ekart_1755714330148-push-trigger-input-set
+  identifier: Build_PatricioHdz_Ekart_1755714330148pushtriggerinputset
+  orgIdentifier: Patricio_Playground
+  projectIdentifier: EKart
+  pipeline:
+    identifier: Build_PatricioHdz_Ekart_1755714330148
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
